@@ -1,3 +1,5 @@
+package TP1;
+
 import java.util.Scanner;
 
 public class Hour {
@@ -6,13 +8,13 @@ public class Hour {
 
         System.out.println("Entrez 3 entiers: ");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Heure (hh): ");
+        System.out.println("Heures (hh): ");
         int h = sc.nextInt();
 
-        System.out.println("Minute (mm): ");
+        System.out.println("Minutes (mm): ");
         int m = sc.nextInt();
 
-        System.out.println("Seconde (ss): ");
+        System.out.println("Secondes (ss): ");
         int s = sc.nextInt();
 
         // Valider l'heure
@@ -21,7 +23,7 @@ public class Hour {
             return;
         }
 
-        // Calculer la seconde suivante
+        // Incrémentation seconde
         s++;
         if (s == 60) {
             s = 0;
@@ -35,7 +37,8 @@ public class Hour {
             }
         }
 
-        // Afficher le résultat
-        System.out.println("La seconde suivante est: " + h + ":" + m + ":" + s);
+        // Afficher le résultat (+ formatage)
+        String formattedTime = String.format("%02d:%02d:%02d", h, m, s);
+        System.out.println("L'heure suivante est: " + formattedTime);
     }
 }

@@ -1,3 +1,5 @@
+package TP1;
+
 import java.util.Scanner;
 
 public class Suite {
@@ -22,7 +24,7 @@ public class Suite {
 
         // Nombre entiers
         System.out.println("Nombre d'entiers: " + count); // -1 pour exclure le 0
-        // Somme
+        // TP1.Somme
         System.out.println("La somme est: " + sum);
         // Moyenne :
         if (count == 0) {
